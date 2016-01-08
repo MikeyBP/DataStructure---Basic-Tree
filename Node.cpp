@@ -12,10 +12,6 @@ Node::Node(std::string name): _name(name), _firstChild(NULL), _lastChild(NULL), 
 
 }
 
-std::string Node::getName(){
-    return _name;
-}
-
 void Node::addChild(Node* child){
 	if(_firstChild == NULL){
 			_firstChild = child;
@@ -28,8 +24,4 @@ void Node::addChild(Node* child){
 
 Node::~Node() {
 	// TODO Auto-generated destructor stub
-}
-
-Node* Node::getNext() const {
-	return _next;
 }

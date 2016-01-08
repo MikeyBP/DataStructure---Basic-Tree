@@ -14,7 +14,8 @@ private:
 	Node* _root;
 
 public:
-	Tree();
+	Tree(Node* root);
+	void traverse();
 	void traverse(Node* node);
 	virtual ~Tree();
 };

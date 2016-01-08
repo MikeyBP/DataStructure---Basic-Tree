@@ -9,18 +9,21 @@
 #include<iostream>
 using namespace std;
 
-Tree::Tree() : _root(NULL){
+Tree::Tree(Node* root) : _root(root){
 
+}
+
+void Tree::traverse(){
+	traverse(_root);
 }
 
 void Tree::traverse(Node* node){
 	cout << node -> _name << endl;
-		Node* i = node -> _firstChild;
-		while(i != NULL)
-		{
-		     traverse(i);
-		     i = i -> _next;
-		}
+	Node* i = node -> _firstChild;
+	while(i != NULL){
+	     traverse(i);
+	     i = i -> _next;
+	}
 }
 
 Tree::~Tree() {

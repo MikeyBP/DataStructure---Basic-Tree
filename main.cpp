@@ -10,7 +10,6 @@
 using namespace std;
 int main()
 {
-	Tree* tree = new Tree();
 	Node* mikey = new Node("Mikey");
 	Node* mitch = new Node("Mitch");
 	Node* ray = new Node("Ray");
@@ -18,13 +17,15 @@ int main()
 	Node* brian = new Node("Brian");
 	Node* kman = new Node("Kman");
 
+	Tree* tree = new Tree(mikey);
+
 	mikey -> addChild(mitch);
 	mikey -> addChild(ray);
 	ray -> addChild(dustin);
 	mitch -> addChild(brian);
-	kman -> addChild(mikey);
+	brian -> addChild(kman);
 
-	tree->traverse(kman);
+	tree->traverse();
 
 	return 0;
 }
